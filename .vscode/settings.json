@@ -1,0 +1,184 @@
+{
+  "css.validate": false,
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "headwind.runOnSave": false,
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.tsdk": "",
+
+  "commentAnchors.showCursor": true,
+  "commentAnchors.tags.provideAutoCompletion": true,
+  "commentAnchors.epic.provideAutoCompletion": true,
+  "commentAnchors.tags.list": [
+    {
+      "tag": "ANCHOR",
+      "enabled": true,
+      "scope": "file",
+      "iconColor": null,
+      "highlightColor": "#cbd5e1",
+      "backgroundColor": "rgb(203,213,225, 0.1)",
+      "styleComment": true,
+      "isItalic": true,
+      "isBold": true,
+      "borderStyle": "1px dotted rgb(203,213,225, 0.75)",
+      "borderRadius": 4
+    },
+    {
+      "tag": "SECTION",
+      "enabled": true,
+      "scope": "workspace",
+      "iconColor": null,
+      "highlightColor": "#a78bfa",
+      "backgroundColor": "rgb(167,139,250, 0.1)",
+      "styleComment": true,
+      "isItalic": true,
+      "isBold": true,
+      "borderStyle": "1px dotted rgb(167,139,250, 0.75)",
+      "borderRadius": 4,
+      "isRegion": true
+    },
+    {
+      "tag": "LINK",
+      "enabled": true,
+      "scope": "workspace",
+      "iconColor": null,
+      "highlightColor": "#3b82f6",
+      "backgroundColor": "rgb(59,130,246, 0.1)",
+      "styleComment": true,
+      "isItalic": true,
+      "isBold": true,
+      "borderStyle": "1px dotted rgb(59,130,246, 0.75)",
+      "borderRadius": 4,
+      "behavior": "link"
+    },
+    {
+      "tag": "NOTE",
+      "enabled": true,
+      "scope": "file",
+      "iconColor": null,
+      "highlightColor": "#60a5fa",
+      "backgroundColor": "rgb(96,165,250, 0.1)",
+      "styleComment": true,
+      "isItalic": true,
+      "isBold": true,
+      "borderStyle": "1px dotted rgb(96,165,250, 0.75)",
+      "borderRadius": 4
+    },
+    {
+      "tag": "REVIEW",
+      "enabled": true,
+      "scope": "workspace",
+      "iconColor": null,
+      "highlightColor": "#84cc16",
+      "backgroundColor": "rgb(132,204,22, 0.1)",
+      "styleComment": true,
+      "isItalic": true,
+      "isBold": true,
+      "borderStyle": "1px dotted rgb(132,204,22, 0.75)",
+      "borderRadius": 4
+
+      // isRegion - Mark this anchor as a region anchor
+    },
+    {
+      "tag": "TODO",
+      "enabled": true,
+      "scope": "workspace",
+      "iconColor": null,
+      "highlightColor": "#facc15",
+      "backgroundColor": "rgb(250,204,21, 0.1)",
+      "styleComment": true,
+      "isItalic": true,
+      "isBold": true,
+      "borderStyle": "1px dotted rgb(250,204,21, 0.75)",
+      "borderRadius": 4
+    },
+    {
+      "tag": "WARNING",
+      "enabled": true,
+      "scope": "file",
+      "iconColor": null,
+      "highlightColor": "#f59e0b",
+      "backgroundColor": "rgb(245,158,11, 0.1)",
+      "styleComment": true,
+      "isItalic": true,
+      "isBold": true,
+      "borderStyle": "1px dotted rgb(245,158,11, 0.75)",
+      "borderRadius": 4
+    },
+    {
+      "tag": "FIXME",
+      "enabled": true,
+      "scope": "workspace",
+      "iconColor": null,
+      "highlightColor": "#dc2626",
+      "backgroundColor": "rgb(220,38,38, 0.1)",
+      "styleComment": true,
+      "isItalic": true,
+      "isBold": true,
+      "borderStyle": "1px dotted rgb(220,38,38, 0.75)",
+      "borderRadius": 4
+    },
+    {
+      "tag": "STUB",
+      "enabled": true,
+      "scope": "file",
+      "iconColor": null,
+      "highlightColor": "#e879f9",
+      "backgroundColor": "rgb(232,121,249, 0.1)",
+      "styleComment": true,
+      "isItalic": true,
+      "isBold": true,
+      "borderStyle": "1px dotted rgb(232,121,249, 0.75)",
+      "borderRadius": 4
+    },
+    {
+      "tag": "CODESNIPPET",
+      "enabled": true,
+      "scope": "file",
+      "iconColor": null,
+      "highlightColor": "#818cf8",
+      "backgroundColor": "rgb(129,140,248, 0.1)",
+      "styleComment": true,
+      "isItalic": true,
+      "isBold": true,
+      "borderStyle": "1px dotted rgb(129,140,248, 0.75)",
+      "borderRadius": 4
+    }
+  ]
+}
+
+// The commented lines below should appear styled when the "Comment Anchor Tags" Extension is activated with the above defined settings
+
+// ANCHOR - This is a General anchor tag
+// SECTION - This is a Section anchor tag
+// LINK - src/components/NextImage.tsx:10
+// NOTE - This is a Note anchor tag
+// REVIEW - This is a Review anchor tag
+// TODO - This is a to-do anchor tag
+// FIXME - This is a FixMe anchor tag
+// WARNING – This is a warning tag
+// STUB - This is a Stub anchor tag
+// CODESNIPPET - This is a CodeSnippet anchor tag
+
+/*
+Required properties:
+
+tag - Specifies the name of the tag
+scope - The scope of a tag. Specifying "file" will only make these visible in the 'File Anchors' list, while "hidden" completely hides it from the anchor list
+highlightColor - The color used for highlighting the tag
+
+Optional properties:
+
+backgroundColor - The color used as tag background
+iconColor - An optional color to apply to the icon, or "auto" for automatic theme detection. Defaults to using highlightColor
+styleComment - Boolean indicating whether to style the entire comment, or just the tag
+borderStyle - Style to be applied to the tag border (See https://www.w3schools.com/cssref/pr_border.asp)
+borderRadius - The curvature radius of the border (Requires borderStyle)
+isBold - Whether to apply bold formatting to the tag
+isItalic - Whether to apply italicized formatting to the tag
+isRegion - Mark this anchor as a region anchor
+enabled - Allows the disabling of default (and custom) tags
+*/
