@@ -79,6 +79,8 @@
   //#endregion  //*======== Commons ===========
 
   //#region  //*=========== Next.js ===========
+
+  // TODO - Update snippets to use correct filepaths and needs
   "Next Pages": {
     "prefix": "np",
     "body": [
@@ -99,6 +101,36 @@
       "    </Layout>",
       "  )",
       "}"
+    ]
+  },
+  "New Blog Page (MDX)": {
+    "prefix": "blog page",
+    "body": [
+      "import { ArticleLayout } from '@/components/blog-components/ArticleLayout';\n",
+      "export const meta = {",
+      "  author: 'Trevor Campbell @ CinemaAI',",
+      "  date: '[ARTICLE PUBLISH DATE HERE]',",
+      "  title: '[ARTICLE TITLE HERE]',",
+      "  description:",
+      "   '[PAGE DESCRIPTION HERE]',",
+      "};\n",
+      "// WARNING - This export default may show an error in editor, but it is needed on every page in for blog to function",
+      "export default (props) => <ArticleLayout meta={meta} {...props} />;\n",
+      "// NOTE - Article content goes below this line\n",
+      "[ARTICLE CONTENT HERE]"
+    ]
+  },
+  "mdx code block": {
+    "prefix": "mdx code",
+    "body": [
+      "// NOTE - [Change language to ts, js, c, as needed]",
+      "```ts",
+      "********************************",
+      "*                              *",
+      "*   Block of Code Goes Here    *",
+      "*                              *",
+      "********************************",
+      "```"
     ]
   },
   "Next API": {

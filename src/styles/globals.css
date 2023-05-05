@@ -64,10 +64,6 @@
   .cursor-newtab {
     cursor: url('/images/new-tab.png') 10 10, pointer;
   }
-
-  .bg-dark a.custom-link {
-    @apply border-gray-200 hover:border-gray-200/0;
-  }
 }
 
 @layer utilities {

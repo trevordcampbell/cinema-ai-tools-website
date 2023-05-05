@@ -1,5 +1,4 @@
 // NOTE - This file is used for the layout of a  individual blog posts ... Don't fuck with it unless you have to!
-
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
@@ -50,9 +49,11 @@ export function ArticleLayout({
         <title>{`${meta.title} - CineAI`}</title>
         <meta name='description' content={meta.description} />
       </Head>
-      <Container className='mt-16 lg:mt-32'>
+      {/* WARNING - This container needs a 'relative' tailwind class in order for the back button to display correctly */}
+      <Container className='relative py-16 lg:py-32'>
         <div className='xl:relative'>
-          <div className='mx-auto max-w-4xl'>
+          <div className='mx-auto max-w-3xl'>
+            {/* TODO - This button only appears when a `previousPathname` exists. If user refreshes page or comes to this as first page, no back button exists. Should this be changed so that it will push user back to 'articles' or another page if no path exists? */}
             {previousPathname && (
               <button
                 type='button'

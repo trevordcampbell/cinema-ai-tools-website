@@ -51,6 +51,7 @@ interface CardEyebrowProps {
   decorate?: boolean;
   className?: string;
   children?: ReactNode;
+  dateTime?: string;
 }
 
 export function Card({
@@ -65,7 +66,7 @@ export function Card({
       {children}
     </Component>
   );
-};
+}
 
 Card.Link = function CardLink({ href, children, ...props }: CardLinkProps) {
   return (
@@ -91,7 +92,9 @@ Card.Title = function CardTitle({
   );
 };
 
-Card.Description = function CardDescription({ children }: CardDescriptionProps) {
+Card.Description = function CardDescription({
+  children,
+}: CardDescriptionProps) {
   return (
     <p className='relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400'>
       {children}

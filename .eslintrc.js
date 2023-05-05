@@ -17,8 +17,8 @@ module.exports = {
     'no-console': 'warn',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'react/no-unescaped-entities': 'off',
-    "@typescript-eslint/no-explicit-any": "off",
-    
+    '@typescript-eslint/no-explicit-any': 'off',
+    'no-warning-comments': 0, // NOTE - Switch this to `1` and specify array of terms if you wish for warning comments to block eslint
     'react/display-name': 'off',
     'react/jsx-curly-brace-presence': [
       'warn',

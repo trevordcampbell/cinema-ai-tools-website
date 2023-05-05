@@ -33,11 +33,11 @@ const modeScript = `
     disableTransitionsTemporarily()
     updateMode()
   }
-`
+`;
 
 export default function Document() {
   return (
-    <Html className='h-full antialiased' lang='en'>
+    <Html className='h-full scroll-smooth antialiased' lang='en'>
       <Head>
         <script dangerouslySetInnerHTML={{ __html: modeScript }} />
         <link
@@ -57,8 +57,19 @@ export default function Document() {
           type='font/woff2'
           crossOrigin='anonymous'
         />
+        <link rel='preconnect' href='https://fonts.googleapis.com' />
+        <link
+          rel='preconnect'
+          href='https://fonts.gstatic.com'
+          crossOrigin='anonymous'
+        />
+        <link
+          rel='stylesheet'
+          href='https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lexend:wght@400;500&display=swap'
+        />
       </Head>
-      <body className='flex h-full flex-col bg-zinc-50 dark:bg-zinc-950'>
+      {/* REVIEW - Check to see if this base styling for text-majorColor and dark:text-majorColor-darkMode should remain... */}
+      <body className='flex h-full flex-col bg-zinc-50 text-majorColor selection:bg-primary-500/25 dark:bg-zinc-950 dark:text-majorColor-darkMode'>
         <Main />
         <NextScript />
       </body>

@@ -10,6 +10,8 @@ type NextImageProps = {
   useSkeleton?: boolean;
   imgClassName?: string;
   blurClassName?: string;
+  priority?: boolean;
+  unoptimized?: boolean;
   alt: string;
 } & (
   | { width: string | number; height: string | number }
@@ -31,6 +33,8 @@ export default function NextImage({
   className,
   imgClassName,
   blurClassName,
+  priority = false,
+  unoptimized = false,
   ...rest
 }: NextImageProps) {
   const [status, setStatus] = React.useState(
@@ -52,6 +56,8 @@ export default function NextImage({
         width={width}
         height={height}
         alt={alt}
+        priority={priority}
+        unoptimized={unoptimized}
         onLoadingComplete={() => setStatus('complete')}
         {...rest}
       />

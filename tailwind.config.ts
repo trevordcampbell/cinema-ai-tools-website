@@ -2,9 +2,7 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
 
 module.exports = {
-  content: [
-    './src/**/*.{js,ts,jsx,tsx}',
-  ],
+  content: ['./src/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
   plugins: [
     require('@tailwindcss/typography'),
@@ -14,19 +12,50 @@ module.exports = {
   theme: {
     // SECTION - Default font size across app
     fontSize: {
+      // From Spotlight Theme (slightly modified)
       xs: ['0.8125rem', { lineHeight: '1.5rem' }],
       sm: ['0.875rem', { lineHeight: '1.5rem' }],
       base: ['1rem', { lineHeight: '1.75rem' }],
       lg: ['1.125rem', { lineHeight: '1.75rem' }],
       xl: ['1.25rem', { lineHeight: '2rem' }],
       '2xl': ['1.5rem', { lineHeight: '2rem' }],
-      '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
-      '4xl': ['2rem', { lineHeight: '2.5rem' }],
+      '3xl': ['2rem', { lineHeight: '2.25rem' }],
+      '4xl': ['2.5rem', { lineHeight: '2.5rem' }],
       '5xl': ['3rem', { lineHeight: '3.5rem' }],
       '6xl': ['3.75rem', { lineHeight: '1' }],
       '7xl': ['4.5rem', { lineHeight: '1' }],
       '8xl': ['6rem', { lineHeight: '1' }],
       '9xl': ['8rem', { lineHeight: '1' }],
+
+      //From Salient Theme
+      // xs: ['0.75rem', { lineHeight: '1rem' }],
+      // sm: ['0.875rem', { lineHeight: '1.5rem' }],
+      // base: ['1rem', { lineHeight: '1.75rem' }],
+      // lg: ['1.125rem', { lineHeight: '2rem' }],
+      // xl: ['1.25rem', { lineHeight: '2rem' }],
+      // '2xl': ['1.5rem', { lineHeight: '2rem' }],
+      // '3xl': ['2rem', { lineHeight: '2.5rem' }],
+      // '4xl': ['2.5rem', { lineHeight: '3.5rem' }],
+      // '5xl': ['3rem', { lineHeight: '3.5rem' }],
+      // '6xl': ['3.75rem', { lineHeight: '1' }],
+      // '7xl': ['4.5rem', { lineHeight: '1.1' }],
+      // '8xl': ['6rem', { lineHeight: '1' }],
+      // '9xl': ['8rem', { lineHeight: '1' }],
+
+      //From Pocket Theme
+      // xs: ['0.75rem', { lineHeight: '1rem' }],
+      // sm: ['0.875rem', { lineHeight: '1.5rem' }],
+      // base: ['1rem', { lineHeight: '1.5rem' }],
+      // lg: ['1.125rem', { lineHeight: '2rem' }],
+      // xl: ['1.25rem', { lineHeight: '1.75rem' }],
+      // '2xl': ['1.5rem', { lineHeight: '2rem' }],
+      // '3xl': ['2rem', { lineHeight: '3rem' }],
+      // '4xl': ['2.5rem', { lineHeight: '3rem' }],
+      // '5xl': ['3rem', { lineHeight: '1' }],
+      // '6xl': ['3.75rem', { lineHeight: '1' }],
+      // '7xl': ['4.5rem', { lineHeight: '1' }],
+      // '8xl': ['6rem', { lineHeight: '1' }],
+      // '9xl': ['8rem', { lineHeight: '1' }],
     },
     extend: {
       fontFamily: {
@@ -34,11 +63,11 @@ module.exports = {
         display: ['Lexend', ...defaultTheme.fontFamily.sans],
       },
       textColor: (theme: any) => ({
-        'majorColor': theme('colors.zinc.800'),
+        majorColor: theme('colors.zinc.800'),
         'majorColor-darkMode': theme('colors.zinc.200'),
-        'minorColor': theme('colors.zinc.600'),
+        minorColor: theme('colors.zinc.600'),
         'minorColor-darkMode': theme('colors.zinc.400'),
-        'dangerColor': theme('colors.red.500'),
+        dangerColor: theme('colors.red.500'),
       }),
       colors: {
         primary: {
@@ -116,7 +145,7 @@ module.exports = {
       },
     },
     // !SECTION
-    
+
     // SECTION - All Styles Below Used for Blog Styling with Tailwind CSS Prose Plugin
     typography: (theme: any) => ({
       invert: {
@@ -400,4 +429,4 @@ module.exports = {
     }),
     // !SECTION
   },
-}
+};

@@ -27,15 +27,5 @@ function usePrevious(value: any) {
 export default function App({ Component, pageProps, router }: AppProps) {
   const previousPathname = usePrevious(router.pathname);
 
-  return (
-    <>
-      <div className='relative'>
-        <Header />
-        <main>
-          <Component previousPathname={previousPathname} {...pageProps} />
-        </main>
-        <Footer />
-      </div>
-    </>
-  );
+  return <Component previousPathname={previousPathname} {...pageProps} />;
 }
