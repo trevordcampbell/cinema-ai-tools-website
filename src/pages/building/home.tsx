@@ -1,8 +1,8 @@
 import * as React from 'react';
 
+import { Hero } from '@/components/building/Hero';
 import Layout from '@/components/page-layout/Layout';
 import Seo from '@/components/Seo';
-import { Hero } from '@/components/building/hero';
 
 export default function HomePage() {
   return (
